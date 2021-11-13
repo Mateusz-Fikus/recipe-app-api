@@ -1,12 +1,21 @@
 FROM python:3.10-alpine
 
 
-#Tells python to run in unbuffered - recommended for docker. Doesnt allow python to buffer outputs
+#Tells python to run in unbuffered - recommended for docker. 
+#Doesnt allow python to buffer outputs
 #to avoid complications
 ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /requirements.txt
+#Uses manager that comes with alpine, update registry before we add it,
+#no cache - dont store on docker file
+RUN apk add --update --no-cache postgresql-client
+#virtual sets up alias for dependencies so we can remove it easier lately
+RUN apk add --update --no-cache --virtual .tmp-build-deps \
+        gcc libc-dev linux-headers postgresql-dev
+
 RUN pip install -r /requirements.txt
+RUN apk del .tmp-build-deps
 
 RUN mkdir /app
 WORKDIR /app
