@@ -31,7 +31,6 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 
-    
 class AuthTokenSerializer(serializers.Serializer):
     email = serializers.CharField()
     password = serializers.CharField(
