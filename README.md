@@ -5,8 +5,11 @@
 ## Main features
 
 -  Docker setup
--  Listing & Filtering
+-  Listing & Filtering querysets
 -  Uploading images
 -  Database management endpoints
 -  User authentication endpoints
--  51 unit tests (TDD)
+-  51 unit tests
+
+
+*Project written using Test Driven Development technique*
