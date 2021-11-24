@@ -105,13 +105,13 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+MEDIA_ROOT = '/vol/web/media'
+
+STATIC_ROOT = 'vol/web/static'
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
