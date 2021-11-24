@@ -1,11 +1,9 @@
 # recipe-app-api
 
-# Project based on Test Driven Development
-
-
 ### RestAPI including food recipes, ingredients, tags, authentication and 51 unit tests.
 
-## Including
+## Main features
+
 -  Docker setup
 -  Listing & Filtering
 -  Uploading images
