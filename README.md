@@ -11,5 +11,3 @@
 -  User authentication endpoints
 -  51 unit tests
 
-
-*Project written using Test Driven Development technique*
